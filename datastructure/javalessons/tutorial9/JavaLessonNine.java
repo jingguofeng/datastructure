@@ -82,5 +82,10 @@ public class JavaLessonNine {
 			
 			int whereIs50 = Arrays.binarySearch(numToSort, 50);
 			System.out.println(whereIs50);
+			
+			String[][] myString = new String[4][6];
+			
+			System.out.println("myString.length: " + myString.length);
+			System.out.println("myString[0].length: " + myString[0].length);
 		}
 }

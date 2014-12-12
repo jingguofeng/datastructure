@@ -33,6 +33,8 @@ public class MonsterTwo {
 			System.out.print('-');
 			kk++;
 		}
+	
+		System.out.println();
 	}
 	
 		public final String TOMBSTONE = "Here Lies a Dead monster";
@@ -72,6 +74,87 @@ public class MonsterTwo {
 				alive = false;
 			}
 		}
+		
+		
+		public void moveMonster(MonsterTwo[] monster, int arrayItemIndex){
+			
+			boolean isSpaceOpen = true;
+			
+			int maxXBoardSpace = battleBoard.length - 1;
+			int maxYBoardSpace = battleBoard[0].length - 1;
+			
+			int oldxPosition = this.xPosition;
+			int oldyPosition = this.yPosition;
+			
+			while(isSpaceOpen){
+				int randMoveDirection = (int) (Math.random()*4);
+				int randMoveDistance = (int) (Math.random()*(this.getMovement())+1);
+				
+				System.out.println("Monster " + this.name + " is moving: " + randMoveDistance + " " + randMoveDirection);
+				
+				if(randMoveDirection == 0){  //left
+					if( (this.yPosition - randMoveDistance) < 0){
+						this.yPosition = 0;
+					}else{
+						this.yPosition = this.yPosition -randMoveDistance;
+					}
+					
+				}else if(randMoveDirection == 1){ //down
+					if((this.xPosition + randMoveDistance) > maxXBoardSpace){
+						this.xPosition = maxXBoardSpace;
+					}else{
+						this.xPosition = this.xPosition + randMoveDistance;
+					}
+				}else if(randMoveDirection == 2){ //right
+					if((this.yPosition + randMoveDistance) > maxYBoardSpace){
+						this.yPosition = maxYBoardSpace;
+					}else{
+						this.yPosition = this.yPosition + randMoveDistance;
+					}
+				}else{
+					if((this.xPosition - randMoveDistance) < 0){
+						this.xPosition = 0;
+					}else{
+						this.xPosition = this.xPosition - randMoveDistance;
+					}
+				}
+				
+				
+				for(int i = 0; i < monster.length; i++){
+					
+					if( i == arrayItemIndex){
+						continue;
+					}
+					
+					if(onMySpace(monster,i, arrayItemIndex)){
+						isSpaceOpen = true;
+						System.out.println("Overlapping!");
+						 this.xPosition = oldxPosition;
+						 this.yPosition = oldyPosition;
+						break;
+					}else{
+						isSpaceOpen = false;
+					}
+				}
+				
+				
+			}// End of While loop
+			
+			battleBoard[oldyPosition][oldxPosition] = '*';
+			battleBoard[this.yPosition][this.xPosition] = this.nameChar1;
+			
+		}//End of moveMonster
+		
+		
+		public boolean onMySpace(MonsterTwo[] monster, int indexToChk1, int indexToChk2){
+			
+			if( (monster[indexToChk1].xPosition) == (monster[indexToChk2].xPosition) && (monster[indexToChk1].yPosition) == (monster[indexToChk2].yPosition) ){
+				return true;
+			}else{
+				return false;
+			}
+		}//End of onMySpace
+		
 		
 		//overloaded method attribute should be different!! Not just the return type.
 		public void setHealth(double decreaseHealth){

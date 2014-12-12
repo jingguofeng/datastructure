@@ -1,5 +1,8 @@
 package tutorial8;
 
+import java.util.Arrays;
+import org.apache.commons.lang3.ArrayUtils;
+
 public class JavaLesssonEight {
 
 	public static void main(String[] args){
@@ -17,7 +20,12 @@ public class JavaLesssonEight {
 		
 		for(MonsterTwo m : Monsters){
 			
-			if
+			if(m.getAlive()){
+				int arrayItemIndex = ArrayUtils.indexOf(Monsters, m);
+				m.moveMonster(Monsters,arrayItemIndex);
+			}
 		}
+		
+		MonsterTwo.redrawBoard();
 	}
 }
