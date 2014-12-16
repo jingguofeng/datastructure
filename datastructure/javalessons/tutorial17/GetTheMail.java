@@ -16,6 +16,6 @@ public class GetTheMail implements Runnable{
 			
 		}
 		
-		System.out.println("ch");
+		System.out.println("Checking Mail");
 	}
 }

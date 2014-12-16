@@ -14,7 +14,7 @@ public class GetTime20  extends Thread{
 		String timeOutput;
 		String dateOutput;
 		
-		for(int i = 1; i <= 5; i++){
+		for(int i = 1; i <= 15; i++){
 			rightNow = new Date();
 			currentLocale = new Locale("en");
 			
@@ -29,7 +29,7 @@ public class GetTime20  extends Thread{
 			System.out.println();
 			
 			try{
-				Thread.sleep(2000);
+				Thread.sleep(1000);
 			}catch(InterruptedException e){
 				
 			}
