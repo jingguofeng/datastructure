@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<response uri="/crm/private/xml/Accounts/getSearchRecordsByPDC"><result><Accounts><row no="1"><FL val="ACCOUNTID">493609000010890281</FL><FL val="SMOWNERID">493609000000429003</FL><FL val="Account Owner"><![CDATA[Jake Malishkevich]]></FL><FL val="Account Name"><![CDATA[Test bbb]]></FL><FL val="Account Total Revenue"><![CDATA[426]]></FL><FL val="Has Attachment"><![CDATA[No]]></FL></row></Accounts></result></response>

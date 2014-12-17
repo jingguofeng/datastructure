@@ -2,6 +2,7 @@ package tutorial17;
 
 import java.util.*;
 import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 
 public class GetTime20  extends Thread{
 
@@ -18,8 +19,13 @@ public class GetTime20  extends Thread{
 			rightNow = new Date();
 			currentLocale = new Locale("en");
 			
-			timeFormatter = DateFormat.getTimeInstance(DateFormat.DEFAULT,currentLocale);
+			SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MMM-yy_hh.mm.ss.S_aa");
+			String formattedDate = dateFormat.format(new Date()).toString();
+			System.out.println(formattedDate);
+			
+			timeFormatter = DateFormat.getTimeInstance(DateFormat.SHORT,currentLocale);
 			dateFormatter = DateFormat.getDateInstance(DateFormat.DEFAULT,currentLocale);
+			
 			
 			timeOutput = timeFormatter.format(rightNow);
 			dateOutput = dateFormatter.format(rightNow);
