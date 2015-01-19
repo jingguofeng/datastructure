@@ -1,0 +1,40 @@
+<SalesOrders>
+<row no="1">
+<FL val="Subject"><![CDATA[Test java input Sale order]]></FL>
+<FL val="Status"><![CDATA[Created]]></FL>
+<FL val="Due Date">2015-03-10</FL>
+<FL val="Account Name"><![CDATA[Test bbb]]></FL>
+<FL val="Sales Order Owner"><![CDATA[Jingguo Feng]]></FL>
+<FL val="Sub Total"><![CDATA[598]]></FL>
+<FL val="Tax"><![CDATA[0]]></FL>
+<FL val="Adjustment"><![CDATA[0]]></FL>
+<FL val="Grand Total"><![CDATA[400]]></FL>
+
+<FL val="Product Details">
+<product no="1">
+<FL val="Product Id">493609000011102558</FL>
+<FL val="Product Name"><![CDATA[Venice Style 64GB USB Drive]]></FL>
+<FL val="Unit Price">0.0</FL>
+<FL val="Quantity">200.0</FL>
+<FL val="Quantity in Stock">0.0</FL>
+<FL val="Total">400.0</FL>
+<FL val="Discount">0.0</FL>
+<FL val="Total After Discount">400.0</FL>
+<FL val="List Price">2</FL>
+<FL val="Net Total">400.0</FL>
+<FL val="Tax">0.0</FL>
+</product>
+</FL>
+
+<FL val="Discount"><![CDATA[0]]></FL>
+<FL val="Order Date"><![CDATA[2014-12-15]]></FL>
+<FL val="Date Flexible?"><![CDATA[Yes]]></FL>
+<FL val="Payment Terms"><![CDATA[Test 111]]></FL>
+<FL val="CC Sec Code"><![CDATA[0]]></FL>
+<FL val="Total Unit Cost"><![CDATA[239]]></FL>
+<FL val="Shipping Method"><![CDATA[UPS]]></FL>
+<FL val="PromoQuote"><![CDATA[810575]]></FL>
+<FL val="Margin"><![CDATA[55]]></FL>
+<FL val="Repeat Customer?"><![CDATA[No]]></FL>
+</row>
+</SalesOrders>
