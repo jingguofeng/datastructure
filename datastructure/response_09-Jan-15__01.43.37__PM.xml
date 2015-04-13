@@ -1,2 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<response uri="/crm/private/xml/Accounts/getSearchRecordsByPDC"><error><code>4834</code><message>Invalid Ticket Id</message></error></response>
+<response uri="/crm/private/xml/Accounts/getSearchRecordsByPDC">
+    <error>
+        <code>4834</code>
+        <message>Invalid Ticket Id</message>
+    </error>
+</response>

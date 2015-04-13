@@ -106,8 +106,8 @@ public class LinkedList_integer {
 			mylist.addFirst(45);
 			mylist.addFirst(23);
 			mylist.addFirst(111);
-			
 			System.out.println(mylist);
+
 			
 			mylist.insertionsort();
 			
